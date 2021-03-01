@@ -17,10 +17,6 @@ done
 # Copy LV2 metadata files etc.
 # The non-native parts should be the same so we just copy files from x86 build.
 #
-# Also, we only need `mda.lv2` here. Avoid copying those LV2 (SDK) files.
-# But not that when you are copying this script, you should probably
-# NOT name a specific plugin.
-#
 mkdir -p app/src/main/assets/lv2
 cp -R dependencies/dragonfly-reverb-deps/dist/x86/*.lv2 app/src/main/assets/lv2/
 # ... except for *.so files. They are stored under jniLibs.

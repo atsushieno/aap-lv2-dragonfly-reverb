@@ -6,11 +6,11 @@ plugins {
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "org.androidaudioplugin.aap_mda_lv2"
+        applicationId "org.androidaudioplugin.aap_dragonfly_reverb"
         minSdkVersion 29
         targetSdkVersion 30
         versionCode 1
-        versionName "0.1.9"
+        versionName "0.1.9.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
@@ -63,9 +63,9 @@ android {
 
 dependencies {
     implementation 'org.androidaudioplugin:androidaudioplugin-lv2:0.1.9'
-    implementation 'org.androidaudioplugin:androidaudioplugin-ui-traditional:0.6.7'
+    implementation 'org.androidaudioplugin:androidaudioplugin-ui-traditional:0.6.7.2'
 
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }

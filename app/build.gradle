@@ -9,8 +9,6 @@ android {
         applicationId "org.androidaudioplugin.aap_dragonfly_reverb"
         minSdkVersion 29
         targetSdkVersion 31
-        versionCode 1
-        versionName "0.1.19"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         externalNativeBuild {
@@ -26,7 +24,7 @@ android {
     }
 
     // see androidaudioplugin/build.gradle for details...
-    ndkVersion "21.3.6528147"
+    ndkVersion "$ndk_version"
 
     buildTypes {
         release {

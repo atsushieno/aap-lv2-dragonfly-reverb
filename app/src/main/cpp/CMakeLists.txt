@@ -17,14 +17,12 @@ add_library( # Specifies the name of the library.
         SHARED
 
         # Provides a relative path to your source file(s).
-        "src/main/cpp/dummy.cpp"
+        "dummy.cpp"
         )
 
 target_include_directories(aap-dragonfly-reverb
         PRIVATE
-        "${Project_SOURCE_DIR}/../../../native/plugin-api/include"
-        "${Project_SOURCE_DIR}/../../../native/androidaudioplugin/core/include"
-        "${Project_SOURCE_DIR}/../../../native/androidaudioplugin/android/src/gen/include"
+        "${Project_SOURCE_DIR}/../../../include"
         )
 
 target_compile_options(aap-dragonfly-reverb
@@ -37,3 +35,21 @@ target_compile_options(aap-dragonfly-reverb
         )
 
 target_link_libraries(aap-dragonfly-reverb android log)
+
+if (BUILD_WITH_PREFAB)
+if (ANDROID)
+    find_package (androidaudioplugin REQUIRED CONFIG)
+    set (aap-dragonfly-reverb_LIBS
+            android
+            log
+            androidaudioplugin::androidaudioplugin)
+else (ANDROID)
+    set (aap-dragonfly-reverb_LIBS)
+endif (ANDROID)
+target_link_libraries(aap-dragonfly-reverb ${aap-dragonfly-reverb_LIBS})
+else ()
+target_link_libraries(aap-dragonfly-reverb android log)
+endif ()
+
+# uncomment this if you want to enable AddressSanitizer
+#set_target_properties(aap-dragonfly-reverb PROPERTIES LINK_FLAGS -fsanitize=address)

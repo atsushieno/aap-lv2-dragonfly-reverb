@@ -4,11 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdk = 32
     defaultConfig {
         applicationId "org.androidaudioplugin.aap_dragonfly_reverb"
-        minSdkVersion 29
-        targetSdkVersion 31
+        // FIXME: it is temporarily set to 30.
+        minSdk = 30
+        targetSdk = 32
         versionCode 1
         versionName "0.1.19"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -25,29 +26,30 @@ android {
         }
     }
 
-    // see androidaudioplugin/build.gradle for details...
-    ndkVersion "21.3.6528147"
+
+    ndkVersion "$ndk_version"
 
     buildTypes {
+        debug {
+            packagingOptions {
+                doNotStrip "**/*.so"
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-        }
-    }
-    // FIXME: enable these sections once we migrated to prefab.
-    /*
+
     buildFeatures {
         prefab true
     }
-    */
-    packagingOptions{
-        //doNotStrip "**/*.so" // debuggable!
-        pickFirst "**/libc++_shared.so"
+
+    externalNativeBuild {
+        cmake {
+            version "3.18.1"
+            path "src/main/cpp/CMakeLists.txt"
+        }
     }
 
     // AGP, Android Lint, and/or appcompat package is stupid and results in their own error to block our builds.
@@ -63,8 +65,8 @@ android {
 }
 
 dependencies {
-    implementation 'org.androidaudioplugin:androidaudioplugin-lv2:0.1.19'
-    implementation 'org.androidaudioplugin:androidaudioplugin-ui-compose:0.6.20'
+    implementation "org.androidaudioplugin:androidaudioplugin-lv2:$aap_lv2_version"
+    implementation "org.androidaudioplugin:androidaudioplugin-ui-compose:$aap_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

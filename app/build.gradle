@@ -4,12 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         applicationId "org.androidaudioplugin.aap_dragonfly_reverb"
-        // FIXME: it is temporarily set to 30.
-        minSdk = 30
-        targetSdk = 32
+        minSdk = 29
+        targetSdk = 33
         versionCode 1
         versionName "0.1.19"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

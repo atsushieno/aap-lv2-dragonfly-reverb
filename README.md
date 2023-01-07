@@ -1,6 +1,6 @@
-# aap-lv2-dragonfly-reverb: Dragonfly-Reverb ported to Android Audio Plugin
+# aap-lv2-dragonfly-reverb: Dragonfly-Reverb ported to Audio Plugins For Android
 
-It is a port of [Dragonfly-Reverb](https://github.com/michaelwillis/dragonfly-reverb) to [AAP](https://github.com/atsushieno/android-audio-plugin-framework/). It is powered by LV2 using [aap-lv2](https://github.com/atsushieno/aap-lv2/).
+It is a port of [Dragonfly-Reverb](https://github.com/michaelwillis/dragonfly-reverb) to [AAP](https://github.com/atsushieno/aap-core/). It is powered by LV2 using [aap-lv2](https://github.com/atsushieno/aap-lv2/).
 
 ## Building
 

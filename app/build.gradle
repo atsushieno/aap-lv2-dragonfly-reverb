@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdk = 33
     defaultConfig {
-        applicationId "org.androidaudioplugin.aap_dragonfly_reverb"
+        applicationId "org.androidaudioplugin.ports.lv2.dragonfly_reverb"
         minSdk = 29
         targetSdk = 33
         versionCode 1

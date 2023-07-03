@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
+    namespace 'org.androidaudioplugin.ports.lv2.dragonfly_reverb'
     compileSdk = 33
     defaultConfig {
         applicationId "org.androidaudioplugin.ports.lv2.dragonfly_reverb"
         minSdk = 29
-        targetSdk = 33
         versionCode 1
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -44,7 +44,7 @@ android {
 
     externalNativeBuild {
         cmake {
-            version "3.18.1"
+            version libs.versions.cmake.get()
             path "src/main/cpp/CMakeLists.txt"
         }
     }
@@ -52,12 +52,15 @@ android {
     // AGP, Android Lint, and/or appcompat package is stupid and results in their own error to block our builds.
     // > androidx.appcompat.AppCompatIssueRegistry in /home/runner/.gradle/caches/transforms-2/files-2.1/2dfc7e2f9c4e61e976acb8f06b4a9014/appcompat-1.2.0/jars/lint.jar does not specify a vendor; see IssueRegistry#vendor
     // This is a suggested workaround (by AGP or Gradle)
-    lintOptions {
-        abortOnError false
-    }
 
-    aaptOptions {
-        noCompress "sample.wav"
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    androidResources {
+        noCompress 'sample.wav'
+    }
+    lint {
+        abortOnError false
     }
 }
 

@@ -1,0 +1,70 @@
+<plugins xmlns="urn:org.androidaudioplugin.core" xmlns:pp="urn:org.androidaudioplugin.port">
+  <plugin backend="LV2" name="Dragonfly Hall Reverb" category="Effect" developer="Michael Willis and Rob vd Berg" unique-id="lv2:https://github.com/michaelwillis/dragonfly-reverb" library="libandroidaudioplugin-lv2.so" entrypoint="GetAndroidAudioPluginFactoryLV2Bridge" gui:ui-view-factory="org.androidaudioplugin.ui.compose.ComposeAudioPluginViewFactory" xmlns:gui="urn://androidaudioplugin.org/extensions/gui" >
+    <extensions>
+      <extension uri='urn://androidaudioplugin.org/extensions/plugin-info/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/state/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/parameters/v2.1' />
+      <extension uri='urn://androidaudioplugin.org/extensions/midi/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/gui/v2' />
+    </extensions>
+    <ports>
+      <port direction='input' content='audio' name='Audio Input 1' />
+      <port direction='input' content='audio' name='Audio Input 2' />
+      <port direction='output' content='audio' name='Audio Output 1' />
+      <port direction='output' content='audio' name='Audio Output 2' />
+      <port direction='input' content='midi2' name='MIDI In' />
+      <port direction='output' content='midi2' name='MIDI Out' />
+    </ports>
+  </plugin>
+  <plugin backend="LV2" name="Dragonfly Early Reflections" category="Effect" developer="Michael Willis" unique-id="lv2:urn:dragonfly:early" library="libandroidaudioplugin-lv2.so" entrypoint="GetAndroidAudioPluginFactoryLV2Bridge" gui:ui-view-factory="org.androidaudioplugin.ui.compose.ComposeAudioPluginViewFactory" xmlns:gui="urn://androidaudioplugin.org/extensions/gui" >
+    <extensions>
+      <extension uri='urn://androidaudioplugin.org/extensions/plugin-info/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/state/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/parameters/v2.1' />
+      <extension uri='urn://androidaudioplugin.org/extensions/midi/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/gui/v2' />
+    </extensions>
+    <ports>
+      <port direction='input' content='audio' name='Audio Input 1' />
+      <port direction='input' content='audio' name='Audio Input 2' />
+      <port direction='output' content='audio' name='Audio Output 1' />
+      <port direction='output' content='audio' name='Audio Output 2' />
+      <port direction='input' content='midi2' name='MIDI In' />
+      <port direction='output' content='midi2' name='MIDI Out' />
+    </ports>
+  </plugin>
+  <plugin backend="LV2" name="Dragonfly Plate Reverb" category="Effect" developer="Michael Willis" unique-id="lv2:urn:dragonfly:plate" library="libandroidaudioplugin-lv2.so" entrypoint="GetAndroidAudioPluginFactoryLV2Bridge" gui:ui-view-factory="org.androidaudioplugin.ui.compose.ComposeAudioPluginViewFactory" xmlns:gui="urn://androidaudioplugin.org/extensions/gui" >
+    <extensions>
+      <extension uri='urn://androidaudioplugin.org/extensions/plugin-info/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/state/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/parameters/v2.1' />
+      <extension uri='urn://androidaudioplugin.org/extensions/midi/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/gui/v2' />
+    </extensions>
+    <ports>
+      <port direction='input' content='audio' name='Audio Input 1' />
+      <port direction='input' content='audio' name='Audio Input 2' />
+      <port direction='output' content='audio' name='Audio Output 1' />
+      <port direction='output' content='audio' name='Audio Output 2' />
+      <port direction='input' content='midi2' name='MIDI In' />
+      <port direction='output' content='midi2' name='MIDI Out' />
+    </ports>
+  </plugin>
+  <plugin backend="LV2" name="Dragonfly Room Reverb" category="Effect" developer="Michael Willis" unique-id="lv2:urn:dragonfly:room" library="libandroidaudioplugin-lv2.so" entrypoint="GetAndroidAudioPluginFactoryLV2Bridge" gui:ui-view-factory="org.androidaudioplugin.ui.compose.ComposeAudioPluginViewFactory" xmlns:gui="urn://androidaudioplugin.org/extensions/gui" >
+    <extensions>
+      <extension uri='urn://androidaudioplugin.org/extensions/plugin-info/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/state/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/parameters/v2.1' />
+      <extension uri='urn://androidaudioplugin.org/extensions/midi/v2' />
+      <extension uri='urn://androidaudioplugin.org/extensions/gui/v2' />
+    </extensions>
+    <ports>
+      <port direction='input' content='audio' name='Audio Input 1' />
+      <port direction='input' content='audio' name='Audio Input 2' />
+      <port direction='output' content='audio' name='Audio Output 1' />
+      <port direction='output' content='audio' name='Audio Output 2' />
+      <port direction='input' content='midi2' name='MIDI In' />
+      <port direction='output' content='midi2' name='MIDI Out' />
+    </ports>
+  </plugin>
+</plugins>

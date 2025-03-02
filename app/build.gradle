@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace 'org.androidaudioplugin.ports.lv2.dragonfly_reverb'
-    compileSdk = 34
+    compileSdk = libs.versions.android.compileSdk.get().toInteger()
     defaultConfig {
         applicationId "org.androidaudioplugin.ports.lv2.dragonfly_reverb"
-        minSdk = 29
+        minSdk = libs.versions.android.minSdk.get().toInteger()
         versionCode 1
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -80,8 +80,6 @@ dependencies {
     androidTestImplementation project(":androidaudioplugin-testing")
     */
 
-
     testImplementation libs.junit
-    androidTestImplementation libs.test.rules
     androidTestImplementation libs.test.ext.junit
 }

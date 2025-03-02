@@ -22,10 +22,12 @@ cp -R dependencies/dragonfly-reverb-deps/dist/x86/*.lv2 app/src/main/assets/lv2/
 # ... except for *.so files. They are stored under jniLibs.
 rm app/src/main/assets/lv2/*/*.so
 
-# Generate `aap-metadata.xml` that AAP service look up plugins.
-mkdir -p app/src/main/assets/lv2
-mkdir -p app/src/main/res/xml
-$AAP_LV2_DIR/tools/aap-import-lv2-metadata/build/aap-import-lv2-metadata \
-	app/src/main/assets/lv2 \
-	app/src/main/res/xml
 
+# <DEPRECATED> aap_metadata.xml is not automatically generated now (no need).
+# Generate `aap-metadata.xml` that AAP service look up plugins.
+#mkdir -p app/src/main/assets/lv2
+#mkdir -p app/src/main/res/xml
+#$AAP_LV2_DIR/tools/aap-import-lv2-metadata/build/aap-import-lv2-metadata \
+#	app/src/main/assets/lv2 \
+#	app/src/main/res/xml
+# </DEPRECATED>
